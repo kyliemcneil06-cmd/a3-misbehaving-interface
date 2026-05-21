@@ -1,0 +1,13 @@
+#myButton {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooths the color transition */
+}
+
+/* Changes color on hover automatically */
+#myButton:hover {
+  background-color: darkblue;
+}
