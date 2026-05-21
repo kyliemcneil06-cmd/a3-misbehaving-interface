@@ -75,8 +75,10 @@ btn.addEventListener('click', function() {
     btn.style.backgroundColor = "red";
 });
 
+// __________________
+
 function myfirstfunction() {
-    document.querySelector("#myButton").innerHTML = "you clicked me??"}
+    document.querySelector("#myButton").innerHTML = "why did you click them and not me, CLICK ME YOU COWARD????"}
     // calling the function
 
 // myfirstfunction()
@@ -87,10 +89,13 @@ document.querySelector("p").addEventListener("click", myfirstfunction)
 //  division 
 
 function mysecondfunction() {
-    document.querySelector("#WHOOO").innerHTML = "YOU DID THIS"}
+    document.querySelector("#WHOOO").innerHTML = "..."}
 
 document.querySelector("p").addEventListener("click", mysecondfunction)
 
+// function anotherfunction() {
+//     document.querySelector("#yooo").innerHTML = add a button here}
+//     // calling the function
 
 
 
