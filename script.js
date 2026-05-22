@@ -1,97 +1,122 @@
-// * camelCase:
-// * Kylie-Mcneil - normal 
-// * kylieMcneil - camelCase (no spaces, capatilization idicates new word)
-function loadButton (){}
+// // * camelCase:
+// // * Kylie-Mcneil - normal 
+// // * kylieMcneil - camelCase (no spaces, capatilization idicates new word)
+// function loadButton (){}
 
-// if/else + console 
-//LIsten for keydown on a button 
-//  open browser conseol on chrome:
-// cmd/ctrl + shift + i 
+// // if/else + console 
+// //LIsten for keydown on a button 
+// //  open browser conseol on chrome:
+// // cmd/ctrl + shift + i 
 
-// print hello into the console 
-console.log ('heyyyo')
-// assign vale to the lew variable 
-let cooler = 4
-// how to print cooler in the console
-console.log (cooler)
-// I only want to print cooler if it equals 6
-// make it a statement 
-// check if cooler is equal to 4
-if (cooler == 6){ 
-    // if cooler (=4) is equal to 6 do this/show this text
-    // this here is do a thing, if cooler is equal to four show the text: it is equal to four.
-    console.log('cooler is equal to 4')
-}
-else{
-// if cooler (=4) is not equal to 6 show this text
-console.log ('cooler is not equal to 6')
-}
+// // print hello into the console 
+// console.log ('heyyyo')
+// // assign vale to the lew variable 
+// let cooler = 4
+// // how to print cooler in the console
+// console.log (cooler)
+// // I only want to print cooler if it equals 6
+// // make it a statement 
+// // check if cooler is equal to 4
+// if (cooler == 6){ 
+//     // if cooler (=4) is equal to 6 do this/show this text
+//     // this here is do a thing, if cooler is equal to four show the text: it is equal to four.
+//     console.log('cooler is equal to 4')
+// }
+// else{
+// // if cooler (=4) is not equal to 6 show this text
+// console.log ('cooler is not equal to 6')
+// }
 
-if (cooler > 2){
-    console.log('cooler is bigger then 2') 
-}
+// if (cooler > 2){
+//     console.log('cooler is bigger then 2') 
+// }
 
-// add an event listener 
-// attatch the keydown event to it 
-// listen for which key
+// // add an event listener 
+// // attatch the keydown event to it 
+// // listen for which key
 
-// attatch the event listener to the document (HTML page)
-// listening specifically to the keydown event
+// // attatch the event listener to the document (HTML page)
+// // listening specifically to the keydown event
 
-// create a little counter 
-let counter = 0
+// // create a little counter 
+// let counter = 0
 
-document.addEventListener ('keydown', (event) => { 
-    // print the data from the keydown
-console.log (event.key)
-// if the key we pressed is spacebar 
-if (event.key == ' '){
-// but only print yay if counter = four 
-if(counter ==4){
-console.log('yaaay')
-}
+// document.addEventListener ('keydown', (event) => { 
+//     // print the data from the keydown
+// console.log (event.key)
+// // if the key we pressed is spacebar 
+// if (event.key == ' '){
+// // but only print yay if counter = four 
+// if(counter ==4){
+// console.log('yaaay')
+// }
 
-// add one to our counter value 
-counter = counter + 1
-console.log(counter)
+// // add one to our counter value 
+// counter = counter + 1
+// console.log(counter)
 
-// new condition: 
+// // new condition: 
 
-}
-})
-
-
-// this esctially does the math four you 
-
-// _____________________________________________________
+// }
+// })
 
 
-// Select the button from the HTML
-const btn = document.getElementById('myButton');
+// // this esctially does the math four you 
 
-// Add a 'click' event listener
-btn.addEventListener('click', function() {
-    // Change the background color to green
-    btn.style.backgroundColor = "red";
+// // _____________________________________________________
+
+
+// // Select the button from the HTML
+// const btn = document.getElementById('myButton');
+
+// // Add a 'click' event listener
+// btn.addEventListener('click', function() {
+//     // Change the background color to green
+//     btn.style.backgroundColor = "red";
+// });
+
+// // __________________
+
+// function myfirstfunction() {
+//     document.querySelector("#myButton").innerHTML = "why did you click them and not me, CLICK ME YOU COWARD????"}
+//     // calling the function
+
+// // myfirstfunction()
+
+// // add mouse click listener function
+// document.querySelector("p").addEventListener("click", myfirstfunction)
+   
+// //  division 
+
+// function mysecondfunction() {
+//     document.querySelector("#WHOOO").innerHTML = "..."}
+
+// document.querySelector("p").addEventListener("click", mysecondfunction)
+
+// _____________________________________
+
+const slider = document.getElementById('colorSlider');
+const percentageText = document.getElementById('percentage');
+const lockValue = slider.max
+
+slider.addEventListener('input', function() {
+  const value = slider.value; 
+  percentageText.textContent = `${value}%`;
+
+  const red = 255;
+  const green = Math.round(255 - (2.55 * value));
+  const blue = Math.round(255 - (2.55 * value));
+
+  // Apply the dynamic RGB color to the body
+  document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 });
 
-// __________________
 
-function myfirstfunction() {
-    document.querySelector("#myButton").innerHTML = "why did you click them and not me, CLICK ME YOU COWARD????"}
-    // calling the function
 
-// myfirstfunction()
+// _____________________________________
 
-// add mouse click listener function
-document.querySelector("p").addEventListener("click", myfirstfunction)
-   
-//  division 
 
-function mysecondfunction() {
-    document.querySelector("#WHOOO").innerHTML = "..."}
 
-document.querySelector("p").addEventListener("click", mysecondfunction)
 
 // function anotherfunction() {
 //     document.querySelector("#yooo").innerHTML = add a button here}

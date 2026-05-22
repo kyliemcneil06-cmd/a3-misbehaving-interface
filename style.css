@@ -1,4 +1,4 @@
-#myButton {
+/* #myButton {
   background-color: blue;
   color: white;
   padding: 10px 20px;
@@ -8,6 +8,31 @@
 }
 
 /* Changes color on hover automatically */
-#myButton:hover {
+/* #myButton:hover {
   background-color: darkblue;
+} */ */
+
+/* _____________________ */
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255); /* Starting color: White */
+  transition: background-color 0.1s ease; /* Smooth fade effect */
+  font-family: sans-serif;
+}
+
+.slider-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input[type="range"] {
+  width: 300px;
+  cursor: pointer;
 }
