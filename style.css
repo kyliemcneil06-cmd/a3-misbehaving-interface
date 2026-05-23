@@ -64,3 +64,6 @@ input[type="range"] {
     transform: translate(calc(var(--x) * 20px), calc(var(--y) * 20px));
     opacity: 0.8;
 }
+
+/* ____________ */
+
