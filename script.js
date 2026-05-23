@@ -131,3 +131,48 @@ slider.addEventListener('input', function() {
 //   const btn = document.getElementById("hiddenButton");
 //   // Change its CSS display property from 'none' to 'inline-block' (or 'block')
 //   btn.style.display = "inline-block";
+
+// __________________-
+
+function splitImage() {
+    const container = document.getElementById('imageContainer');
+    const img = document.getElementById('mainImage');
+    
+    // Prevent clicking multiple times 
+    if (container.classList.contains('exploded')) return;
+    
+    const rows = 4;
+    const cols = 4;
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+    const pieceWidth = width / cols;
+    const pieceHeight = height / rows;
+
+    // Create container pieces
+    container.classList.add('exploded');
+    container.style.display = 'grid';
+    container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+
+    // Clear original image
+    container.innerHTML = '';
+
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            const piece = document.createElement('div');
+            piece.classList.add('piece');
+            
+            // Set CSS variables to help with animating individual directions
+            piece.style.setProperty('--x', j - Math.floor(cols / 2));
+            piece.style.setProperty('--y', i - Math.floor(rows / 2));
+            
+            // Calculate exact crop location for the background (the secret to splitting)
+            const xPos = -j * pieceWidth;
+            const yPos = -i * pieceHeight;
+            piece.style.backgroundImage = `url(${img.src})`;
+            piece.style.backgroundPosition = `${xPos}px ${yPos}px`;
+            
+            container.appendChild(piece);
+        }
+    }
+}

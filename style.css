@@ -36,3 +36,31 @@ input[type="range"] {
   width: 300px;
   cursor: pointer;
 }
+
+/* __________________
+
+.image-container {
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.piece {
+    background-size: 400px 400px; /* Match the container's width/height */
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+}
+
+.exploded .piece {
+    /* Optional: Animate pieces outward to simulate a breaking effect */
+    transform: translate(calc(var(--x) * 20px), calc(var(--y) * 20px));
+    opacity: 0.8;
+}
