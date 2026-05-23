@@ -178,35 +178,3 @@ function splitImage() {
 }
 
 // ________
-
-// Alias Matter.js modules
-const { Engine, Render, Runner, Bodies, Composite, Mouse, MouseConstraint } = Matter;
-
-// Create engine and renderer
-const engine = Engine.create();
-const container = document.getElementById('physics-container');
-const render = Render.create({
-    element: container,
-    engine: engine,
-    options: { width: container.clientWidth, height: 500, wireframes: false }
-});
-
-// Create invisible floor boundary
-const floor = Bodies.rectangle(container.clientWidth / 2, 500, container.clientWidth, 60, { isStatic: true });
-Composite.add(engine.world, [floor]);
-
-// Run engine
-Render.run(render);
-Runner.run(Runner.create(), engine);
-
-// Add interactivity
-const mouse = Mouse.create(render.canvas);
-const mouseConstraint = MouseConstraint.create(engine, { mouse: mouse });
-Composite.add(engine.world, mouseConstraint);
-
-// Button click listener to add objects with gravity
-document.getElementById('spawnButton').addEventListener('click', function() {
-    const x = Math.random() * (container.clientWidth - 100) + 50;
-    const body = Bodies.circle(x, 50, 30, { restitution: 0.8 }); // restitution is bounciness
-    Composite.add(engine.world, body);
-});
