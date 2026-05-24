@@ -66,4 +66,18 @@ input[type="range"] {
 
 /* ____________ */
 
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrollbars if image moves off-screen */
+}
 
+#runaway-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: auto;
+    transition: all 0.2s ease-out; /* Smooth movement */
+    transform: translate(-50%, -50%);
+}
