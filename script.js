@@ -94,6 +94,24 @@
 // document.querySelector("p").addEventListener("click", mysecondfunction)
 
 // _____________________________________
+// _____text changes start_____
+
+function changeText() {
+    document.getElementById("targetText").innerHTML = "*Francis does nothing*";
+}
+
+function Weee() {
+    document.getElementById("LETSGO").innerHTML = "Ok in order to take care of your son, you must give it enough heat to continue his development, take the slider and move it 100% to keep him warm!";
+}
+
+function batman() {
+    document.getElementById("justice").innerHTML = "hmmm the Son warmer 3000 didn't really do much exept make everything purple... oh well, mind use the Son Cooler 3001"; }
+
+
+
+
+
+// ________________________
 
 const slider = document.getElementById('colorSlider');
 const percentageText = document.getElementById('percentage');
