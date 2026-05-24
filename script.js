@@ -169,12 +169,16 @@ function splitImage() {
             // Calculate exact crop location for the background (the secret to splitting)
             const xPos = -j * pieceWidth;
             const yPos = -i * pieceHeight;
-            piece.style.backgroundImage = `url(${img.src})`;
+            piece.style.backgroundImage = `url(${EGG.png})`;
             piece.style.backgroundPosition = `${xPos}px ${yPos}px`;
             
             container.appendChild(piece);
         }
     }
 }
+
+// _________________
+
+
 
 // ________

@@ -60,10 +60,10 @@ input[type="range"] {
 }
 
 .exploded .piece {
-    /* Optional: Animate pieces outward to simulate a breaking effect */
     transform: translate(calc(var(--x) * 20px), calc(var(--y) * 20px));
     opacity: 0.8;
 }
 
 /* ____________ */
+
 
