@@ -94,6 +94,7 @@
 // document.querySelector("p").addEventListener("click", mysecondfunction)
 
 // _____________________________________
+// _______Original slider______________ 
 
 const slider = document.getElementById('colorSlider');
 const percentageText = document.getElementById('percentage');
@@ -112,7 +113,7 @@ slider.addEventListener('input', function() {
 });
 
 
-
+// _______Original slider______________ 
 // _____________________________________
 
 
@@ -213,5 +214,21 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-
 // ________
+
+const slider = document.getElementById('color-slider');
+const body = document.getElementById('page-body');
+
+slider.addEventListener('input', function turnRed() {
+    // Turn the background red
+    body.style.backgroundColor = 'red';
+    
+    // Remove the event listener so further adjustments do nothing
+    slider.removeEventListener('input', turnRed);
+    
+    // Optional: Visually lock the slider in place by changing its opacity or color
+    slider.style.opacity = '0.5';
+    slider.style.pointerEvents = 'none';
+});
+
+
