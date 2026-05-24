@@ -214,4 +214,16 @@ document.addEventListener('mousemove', (e) => {
 });
 
 
-// ________
+// ______________________________
+// ________submition box________
+
+const myForm = document.getElementById('myForm');
+const message = document.getElementById('message');
+
+myForm.addEventListener('submit', function(event) {
+
+  event.preventDefault(); 
+  
+  message.textContent = "Form failled to Send, Retry in 6 Millennia. ";
+});
+// ________submition box________

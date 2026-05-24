@@ -55,16 +55,21 @@ input[type="range"] {
 
 .piece {
     background-size: 400px 400px; /* Match the container's width/height */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     transition: all 0.5s ease;
-}
+/* } */
+
+/* ____________________________ */
+/* __________EGG(?)______________ */
+
 
 .exploded .piece {
     transform: translate(calc(var(--x) * 20px), calc(var(--y) * 20px));
     opacity: 0.8;
 }
 
-/* ____________ */
+/* __________EGG(?)______________ */
+/* ________bird__________________ */
 
 body {
     margin: 0;
@@ -80,4 +85,31 @@ body {
     height: auto;
     transition: all 0.2s ease-out; /* Smooth movement */
     transform: translate(-50%, -50%);
+}
+/* ________bird__________________ */
+/*_________submit box____________*/
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 10px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
