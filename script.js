@@ -105,7 +105,7 @@ function Weee() {
 }
 
 function batman() {
-    document.getElementById("justice").innerHTML = "hmmm the Son warmer 3000 didn't really do much except make everything purple... oh well, mind use the Son Cooler 3001"; }
+    document.getElementById("justice").innerHTML = "hmmm the Son warmer 3000 didn't really do much except make everything purple... Well we mind as well use the Son Cooler 3001"; }
 
 function YEAH() {
     document.getElementById("mhm").innerHTML = "Welp that doesn't seem to be working either... And this pesky bird won't go away! try to catch and click him and maybe he'll finally fly away!"; }
