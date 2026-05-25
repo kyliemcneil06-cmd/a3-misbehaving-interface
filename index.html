@@ -104,6 +104,9 @@
 
 </div>
 
+<!-- ____________________________________ -->
+<!-- _____________Submit box_____________ -->
+
 <form id="myForm">
   <label for="name">Please submit any complaints you have here:</label>
   <input type="text" id="name" required>
@@ -112,24 +115,75 @@
 </form>
 <p id="message"></p>
 
+<!--  _________________ --> 
+<!-- ______text_______ -->
 
-<!-- ____________________________________ -->
-<!-- _____________Submit box_____________ -->
+<span onclick="loll ()" style="color: rgb(107, 107, 114); cursor: pointer;"> I sent it </span>
 
-<!-- <form id="myForm">
-  <label for="name">Please submit any complaints you have here:</label>
-  <input type="text" id="name" required>
-  
-  <button type="submit">Submit</button>
-</form>
-<p id="message"></p> -->
+<p id="laugh">...</p>
 
 <!-- __________________________________ -->
  <!--__________split image________ -->
 
-<div class="image-container" id="imageContainer" onclick="splitImage()">
+<!-- <div class="image-container" id="imageContainer" onclick="splitImage()">
     <img id="mainImage" src="EGG.png" alt="Click to split">
+</div> -->
+
+<style>
+  .image-container {
+    position: relative;
+    width: 400px;  /* Set to your image width */
+    height: 400px; /* Set to your image height */
+    cursor: pointer;
+    overflow: hidden;
+    margin: 50px auto;
+  }
+
+  .half {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Replace with your image URL */
+    background-image: url('EGG.png');
+    background-size: cover;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* Clip the left half of the image */
+  .left {
+    clip-path: inset(0 50% 0 0);
+  }
+
+  /* Clip the right half of the image */
+  .right {
+    clip-path: inset(0 0 0 50%);
+  }
+
+  /* Movement when the container has the 'split' class */
+  .image-container.split .left {
+    transform: translateX(-10%);
+  }
+
+  .image-container.split .right {
+    transform: translateX(10%);
+  }
+</style>
+</head>
+<body>
+
+<!-- Clicking this container toggles the 'split' class via JavaScript -->
+<div class="image-container" onclick="this.classList.toggle('split')">
+  <div class="half left"></div>
+  <div class="half right"></div>
 </div>
+<!-- __________________ --> 
+<!-- ______text_______ -->
+
+<span onclick="NANA()" style="color: rgb(107, 107, 114); cursor: pointer;"> Uhhh- </span>
+
+<p id="LALALA">...</p>
+
+<!-- __________________________________ -->
 
 <!-- __________________________________ -->
 <!-- _________ Gravity _________________ -->
@@ -163,7 +217,7 @@
 </head>
 <body>
 
-<button class="gravity-btn" onclick="initGravity()">Reinstate Gravity</button>
+<button class="gravity-btn" onclick="initGravity()">Fix Everything Button</button>
 
 <!-- Add your website content below -->
 <div style="padding: 100px 20px; text-align: center;">

@@ -113,6 +113,13 @@ function YEAH() {
 function NOOO() {
     document.getElementById("cry").innerHTML = "Aww come on! Shoo bird Shoo!! Something is wrong with this website! Nothing seems to work! I would suggest sending a strongly worded email to the creater of the site! "; }
 
+function loll() {
+    document.getElementById("laugh").innerHTML = "Of course the complaints box doesn't work! I don't even know what to do anymore... Well atleast we still have Francis... I suggest giving him a little pet :) "; }
+
+
+    function NANA() {
+    document.getElementById("LALALA").innerHTML = "NOOOO YOU KILLED FRANCIS?? NOOOO! This couldn't get any worse! wait- is that a... fix everything button?? What are you waiting for press it!!!"; }
+
 // ________________________
 
 const slider = document.getElementById('colorSlider');
