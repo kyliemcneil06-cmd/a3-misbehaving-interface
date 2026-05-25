@@ -121,12 +121,12 @@ slider.addEventListener('input', function() {
   const value = slider.value; 
   percentageText.textContent = `${value}%`;
 
-  const red = 255;
-  const green = Math.round(255 - (2.55 * value));
-  const blue = Math.round(255 - (2.55 * value));
+  const purple = 128;
+  const green = Math.round(128 - (128 * value));
+  const blue = Math.round(128 - (.2 * value));
 
   // Apply the dynamic RGB color to the body
-  document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  document.body.style.backgroundColor = `rgb(${purple}, ${green}, ${blue})`;
 });
 
 
