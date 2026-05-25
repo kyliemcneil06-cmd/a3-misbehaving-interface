@@ -110,7 +110,8 @@ function batman() {
 function YEAH() {
     document.getElementById("mhm").innerHTML = "Welp that doesn't seem to be working either... And this pesky bird won't go away! try to catch and click him and maybe he'll finally fly away!"; }
 
-
+function NOOO() {
+    document.getElementById("cry").innerHTML = "Aww come on! Shoo bird Shoo!! Something is wrong with this website! Nothing seems to work! I would suggest sending a strongly worded email to the creater of the site! "; }
 
 // ________________________
 
