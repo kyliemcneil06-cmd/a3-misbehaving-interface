@@ -93,8 +93,8 @@
 
 // document.querySelector("p").addEventListener("click", mysecondfunction)
 
-// _____________________________________
-// _____text changes start_____
+// __________________________
+// _____text_____________
 
 function changeText() {
     document.getElementById("targetText").innerHTML = "*Francis does nothing*";
@@ -121,6 +121,7 @@ function loll() {
     document.getElementById("LALALA").innerHTML = "NOOOO YOU KILLED FRANCIS?? NOOOO! This couldn't get any worse! wait- is that a... fix everything button?? What are you waiting for press it!!!"; }
 
 // ________________________
+// ______slider____________
 
 const slider = document.getElementById('colorSlider');
 const percentageText = document.getElementById('percentage');
@@ -139,27 +140,21 @@ slider.addEventListener('input', function() {
 });
 
 
-
 // _____________________________________
-
-
+// _________edited out_____________
 
 
 // function anotherfunction() {
 //     document.querySelector("#yooo").innerHTML = add a button here}
 //     // calling the function
-
-
-
-
-
 // function showNewButton() {
 //   // Select the hidden button by its ID
 //   const btn = document.getElementById("hiddenButton");
 //   // Change its CSS display property from 'none' to 'inline-block' (or 'block')
 //   btn.style.display = "inline-block";
 
-// __________________-
+// ______________________
+// _____split image______
 
 function splitImage() {
     const container = document.getElementById('imageContainer');
