@@ -153,13 +153,14 @@ slider.addEventListener('input', function() {
 //   // Change its CSS display property from 'none' to 'inline-block' (or 'block')
 //   btn.style.display = "inline-block";
 
-// ______________________
-// _____split image______
+// __________________
+// _____
 
 function splitImage() {
     const container = document.getElementById('imageContainer');
     const img = document.getElementById('mainImage');
- 
+    
+    // Prevent clicking multiple times 
     if (container.classList.contains('exploded')) return;
     
     const rows = 4;
@@ -169,12 +170,13 @@ function splitImage() {
     const pieceWidth = width / cols;
     const pieceHeight = height / rows;
 
-
+    // Create container pieces
     container.classList.add('exploded');
     container.style.display = 'grid';
     container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
 
+    // Clear original image
     container.innerHTML = '';
 
     for (let i = 0; i < rows; i++) {
@@ -197,8 +199,7 @@ function splitImage() {
     }
 }
 
-// _________________________
-// ______floating image(?)____
+// _________________
 
 const img = document.getElementById('runaway-img');
 
@@ -206,10 +207,12 @@ document.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
     
+    // Get the image's current position and center point
     const rect = img.getBoundingClientRect();
     const imgX = rect.left + rect.width / 2;
     const imgY = rect.top + rect.height / 2;
 
+    // Calculate distance between mouse and image center
     const distance = Math.hypot(mouseX - imgX, mouseY - imgY);
 
     // If mouse is closer than 150 pixels, move the image
@@ -217,12 +220,12 @@ document.addEventListener('mousemove', (e) => {
         // Calculate angle to move away from the mouse
         const angle = Math.atan2(mouseY - imgY, mouseX - imgX);
         
-
+        // Move image 100px in the opposite direction
         const moveDistance = 100;
         let newX = rect.left - Math.cos(angle) * moveDistance;
         let newY = rect.top - Math.sin(angle) * moveDistance;
 
-    
+        // Boundary checks: Keep image inside the viewport
         newX = Math.max(0, Math.min(window.innerWidth - rect.width, newX));
         newY = Math.max(0, Math.min(window.innerHeight - rect.height, newY));
 
